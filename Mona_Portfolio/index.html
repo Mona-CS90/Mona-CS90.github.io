@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mona Al-Mutairi - Personal Portfolio</title>
+
+  <style>
+    @keyframes fillProgress {
+      from { width: 0%; }
+      to { width: var(--target-width); }
+    }
+    .skill-progress-fill {
+      animation: fillProgress 2s ease-out forwards;
+    }
+
+    article {
+      display: none;
+    }
+    article.active {
+      display: block;
+    }
+  </style>
+
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+    <!-- #SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-logo.png" alt="Mona Al-Mutairi" width="80">
+        </figure>
+        <div class="info-content">
+          <h1 class="name" title="Mona Al-Mutairi">Mona Al-Mutairi</h1>
+          <p class="title">CS Student & AI Trainee</p>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:mona.abdullah.cs@gmail.com" class="contact-link">mona.abdullah.cs@gmail.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Al-Qassim, Saudi Arabia</address>
+            </div>
+          </li>
+        </ul>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item"><a href="https://www.linkedin.com/in/mona-al-mutairi-0bb058271/" class="social-link" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+          <li class="social-item"><a href="https://github.com/Mona-CS90" class="social-link" target="_blank"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li class="social-item"><a href="https://x.com/mona_cs9" class="social-link" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <!-- #NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-btn="about">About Me</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-btn="resume">Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-btn="projects">Projects</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-btn="certificates">Certificates</button></li>
+        </ul>
+      </nav>
+
+      <!-- #ABOUT ME -->
+      <article class="about active" data-portfolio-page="about">
+        <header><h2 class="h2 article-title">About me</h2></header>
+        <section class="about-text">
+          <p>
+            Computer Science student at Qassim University (Expected 2027)<!--[cite: 1, 3] -->. ETRA Program Ambassador, Best Voted Project awardee for AXRION (a multi-agent AI system), and three-time national hackathon finalist as a team founder and presenter<!--[cite: 3] -->.
+          </p>
+          <p>
+            Combines strong technical foundations in Python, AI, and data analysis with proven leadership, public speaking, and problem-solving skills, driven to design and implement innovative technical architectures<!--[cite: 3] -->.
+          </p>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">What I'm Doing</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="hardware-chip-outline" style="font-size: 40px; color: var(--orange-yellow-crayola); margin: auto;"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Artificial Intelligence</h4>
+                <p class="service-item-text">Building multi-agent AI systems, Natural Language Processing, Computer Vision architectures, and custom LLM solutions<!--[cite: 1, 3] -->.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="code-slash-outline" style="font-size: 40px; color: var(--orange-yellow-crayola); margin: auto;"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Software Development</h4>
+                <p class="service-item-text">Developing scalable backend architectures and application workflows using Python, Java, C++, and Agile frameworks<!--[cite: 1, 3] -->.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <!-- تم تعديل المهارة هنا بناءً على طلبك إلى الرؤية الحاسوبية بدقة مع أيقونة مناسبة -->
+              <div class="service-icon-box">
+                <ion-icon name="scan-outline" style="font-size: 40px; color: var(--orange-yellow-crayola); margin: auto;"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Computer Vision & Image Processing</h4>
+                <p class="service-item-text">Applying Edge Detection, dynamic thresholding techniques, and leveraging OpenCV libraries for deep biomedical image segmentation and visual analysis<!--[cite: 3] -->.</p>
+              </div>
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="people-outline" style="font-size: 40px; color: var(--orange-yellow-crayola); margin: auto;"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Leadership & Tech Events</h4>
+                <p class="service-item-text">Directing technology initiatives, hosting community programming events, and orchestrating hackathon sprints<!--[cite: 1, 3] -->.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #RESUME -->
+      <article class="resume" data-portfolio-page="resume">
+        <header><h2 class="h2 article-title">Resume</h2></header>
+
+        <!-- 1. التعليم -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Bachelor of Science in Computer Science — Qassim University</h4>
+              <span>2022 — 2027 (Expected)<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Deep concentration in foundational Computer Science principles, complex algorithm designs, Advanced Data Analysis, and Artificial Intelligence paradigms<!--[cite: 1, 3] -->.</p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 2. الخبرات -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Ambassador — ETRA Program (إترا)</h4>
+              <span>2026 — Present<!--[cite: 3] --></span>
+              <p class="timeline-text">Representing the ETRA initiative to scale technology and AI outreach, driving community technical literacy in alignment with national education identities<!--[cite: 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Trainee — Smart Methods (الأساليب الذكية)</h4>
+              <span>June 2026 — August 2026<!--[cite: 1] --></span>
+              <p class="timeline-text">Engaged in intensive hands-on environments focusing on scalable practical engineering workflows and intelligent AI solutions<!--[cite: 1] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Events Organizer & Presenter — Qassim University Computer Club</h4>
+              <span>May 2023 — Present<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Spearheaded public speaking engagements, successfully moderating and conducting massive programming bootcamps and computing forums<!--[cite: 1, 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Marketer (Part-time) — Qassim University Computer Club</h4>
+              <span>Oct 2024 — Jun 2025<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Designed and drove digital marketing growth strategies to amplify course enrollment and scale club student interaction<!--[cite: 1, 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Graphic Designer — SOCTechMinds</h4>
+              <span>Apr 2023 — Jan 2024<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Created high-fidelity creative digital assets, refining UI layouts and visual-technical communications<!--[cite: 1, 3] -->.</p>
+            </li>
+          </ol>
+        </section>
+
+        <!-- 3. المهارات التقنية -->
+        <section class="skill">
+          <h3 class="h3 skills-title">Technical Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Python, Machine Learning & AI</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 85%; background-color: #ffb700;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Data Analysis & Computer Vision (OpenCV, Pandas)</h5><data value="80">80%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 80%; background-color: #4caf50;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Java / C / C++ (OOP & CLI Architectures)</h5><data value="75">75%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 75%; background-color: #2196f3;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">SDLC, UML Diagrams & Agile/Scrum Frameworks</h5><data value="80">80%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 80%; background-color: #9c27b0;"></div></div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- المهارات الناعمة -->
+        <section class="skill">
+          <h3 class="h3 skills-title">Soft Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Public Speaking & Presentation Excellence</h5><data value="92">92%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 92%; background-color: #e91e63;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Leadership, Team Building & Strategic Ideation</h5><data value="90">90%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 90%; background-color: #00bcd4;"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Event Organization & High-Pressure Management</h5><data value="88">88%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="--target-width: 88%; background-color: #607d8b;"></div></div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 4. اللغات -->
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="language-outline"></ion-icon></div>
+            <h3 class="h3">Languages</h3>
+          </div>
+          <ul class="language-grid-box">
+            <li class="lang-item"><span class="lang-name">Arabic:</span><span class="lang-desc">Native Speaker</span></li>
+            <li class="lang-item"><span class="lang-name">English:</span><span class="lang-desc">Professional Proficiency</span></li>
+            <li class="lang-item"><span class="lang-name">Turkish:</span><span class="lang-desc">Intermediate Level</span></li>
+            <li class="lang-item"><span class="lang-name">Spanish:</span><span class="lang-desc">Professional Diploma Holder</span></li>
+            <li class="lang-item"><span class="lang-name">French:</span><span class="lang-desc">Fundamental Learner</span></li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- #PROJECTS -->
+      <article class="projects" data-portfolio-page="projects">
+        <header><h2 class="h2 article-title">Projects & Hackathons</h2></header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="trophy-outline"></ion-icon></div>
+            <h3 class="h3">Hackathons & Featured Awards</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">AXRION — Best Voted Project Award (GDG on Campus Qassim)</h4>
+              <span>March 2026<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Engineered a state-of-the-art multi-agent AI advisory infrastructure utilizing Persona Simulation, Emotion Detection, Smart Summarizers, and automated Roadmap Architects<!--[cite: 1, 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Abshir Hackathon — National Finalist Team Leader</h4>
+              <span>December 2025<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Led a development sprint at Tuwaiq Academy to pitch 'Jallah', an AI-powered predictive security anomaly detection framework achieving 74% accuracy<!--[cite: 1, 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Hajj Logistics Hackathon — Finalist Team Leader & Concept Owner</h4>
+              <span>2025<!--[cite: 1, 3] --></span>
+              <p class="timeline-text">Designed an automated circular economy supply chain system tailored for deployment at Holy Sites, supporting Vision 2030 initiatives<!--[cite: 1, 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Roshn Hackathon — Finalist Team Leader</h4>
+              <span>2024<!--[cite: 3] --></span>
+              <p class="timeline-text">Conceptualized and engineered 'EcoMind', an AI and IoT smart energy/water resource monitoring infrastructure architecture<!--[cite: 3] -->.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="code-slash-outline"></ion-icon></div>
+            <h3 class="h3">Development Portfolio</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Malika — iOS Mobile Application</h4>
+              <span>2026 — Present<!--[cite: 3] --></span>
+              <p class="timeline-text">Building a modern, full-featured Swift-based iOS application leveraging AI-assisted workflows directly from conceptual prototyping to the App Store<!--[cite: 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Cancer Cell Segmentation Architecture</h4>
+              <span>January 2026<!--[cite: 3] --></span>
+              <p class="timeline-text">Applied dynamic Edge Detection algorithms and spatial thresholding matrices via Python/OpenCV to partition cancerous cell structures within medical imagery files<!--[cite: 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Hajj Crowd Management Drone Command Architecture</h4>
+              <span>Sep — Dec 2025<!--[cite: 3] --></span>
+              <p class="timeline-text">Authored end-to-end Software Engineering documentations (UML modeling, rigorous requirements tracking, Agile workflow charts) for an AI drone crowd routing system<!--[cite: 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Algorithmic Language Detection Core</h4>
+              <span>Oct — Dec 2025<!--[cite: 3] --></span>
+              <p class="timeline-text">Constructed a rapid language classification algorithm utilizing custom N-gram libraries and character frequencies, achieving high speed-accuracy benchmarks (1.1ms vs 2.4ms)<!--[cite: 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Event Registration and Ticketing Portal</h4>
+              <span>Oct — Dec 2025<!--[cite: 3] --></span>
+              <p class="timeline-text">Designed a high-reliability Java desktop environment applying Object-Oriented Design (OOP) principles tightly bound to enterprise database schemas<!--[cite: 3] -->.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Encrypted Cloud Backup Gateway</h4>
+              <span>Sep — Dec 2025<!--[cite: 3] --></span>
+              <p class="timeline-text">Built a production-ready secure data ingestion channel implementing modern cryptographic standards and comprehensive security engineering principles<!--[cite: 3] -->.</p>
+            </li>
+          </ol>
+        </section>
+      </article>
+
+      <!-- #CERTIFICATES -->
+      <article class="certificates" data-portfolio-page="certificates">
+        <header><h2 class="h2 article-title">Certificates & Learning Paths</h2></header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="ribbon-outline"></ion-icon></div>
+            <h3 class="h3">Active Programs & Professional Designations</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">McKinsey Forward Program — Advanced Leadership & Business Workflows</h4>
+              <span>McKinsey & Company — 2026 (In Progress)<!--[cite: 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Oracle Cloud & AI Professional Certification (Mustaqbali Track)</h4>
+              <span>Oracle Corporation — 2026 (In Progress)<!--[cite: 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Unlimited Automation with AI Agents Mastery Track</h4>
+              <span>GDG on Campus Qassim — March 2026<!--[cite: 1, 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Robotics Camp Advanced Engineering Certification</h4>
+              <span>GDG on Campus Qassim — February 2026<!--[cite: 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Image Processing Implementation with Python</h4>
+              <span>Tuwaiq Academy — January 2026<!--[cite: 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">IBM SkillsBuild — AI Specialist & Generative AI Systems Program</h4>
+              <span>IBM SkillsBuild & Technosites — December 2025<!--[cite: 1, 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Advanced Python Specialization (5-Course Professional Mastery)</h4>
+              <span>KAUST AI Program / University of Michigan via Coursera — December 2025<!--[cite: 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Data Pioneer Intensive Machine Learning Camp</h4>
+              <span>AI Pioneers Camp — September 2025<!--[cite: 1, 3] --></span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">High-Impact Professional Communication Workshop</h4>
+              <span>Misk Skills — August 2024<!--[cite: 3] --></span>
+            </li>
+          </ol>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navButtons = document.querySelectorAll("[data-nav-btn]");
+      const articles = document.querySelectorAll("[data-portfolio-page]");
+
+      navButtons.forEach(button => {
+        button.addEventListener("click", function () {
+          const targetPage = this.getAttribute("data-nav-btn");
+
+          navButtons.forEach(btn => btn.classList.remove("active"));
+          articles.forEach(article => article.classList.remove("active"));
+
+          this.classList.add("active");
+          const targetArticle = document.querySelector(`[data-portfolio-page="${targetPage}"]`);
+          if (targetArticle) {
+            targetArticle.classList.add("active");
+          }
+          window.scrollTo(0, 0);
+        });
+      });
+    });
+  </script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
